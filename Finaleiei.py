@@ -23,45 +23,43 @@ from datetime import datetime, timedelta
 
 # ชื่อไฟล์ฐานข้อมูล
 DB_NAME = "user_data.db"
-PIC_PATH = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\"
+
+PIC_PATH = "D:\\Project Nudee\\picnudee\\"
 PROFILE_PICS_DIR = "D:\\Project Nudee\\รูปโปรไฟล์ผู้ใช้\\"
 MENU_PICS_DIR = "D:\\Project Nudee\\รูปเมนูอาหาร\\"
 SLIP_PICS_DIR = "D:\\Project Nudee\\สลิปโอนเงิน\\"
-PIC_CHECKOUT_PAGE ="D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\payment summary.png" 
-PIC_PAYMENT_PAGE ="D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\pay.png"
-PIC_ADMIN_SALES ="D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\Sales.png"
 
 os.makedirs(PROFILE_PICS_DIR, exist_ok=True)
 os.makedirs(MENU_PICS_DIR, exist_ok=True)
 os.makedirs(SLIP_PICS_DIR, exist_ok=True)
 
-
-
-# ชื่อไฟล์รูปภาพ
+# --- กลุ่มที่ 1: ตัวแปรที่ถูกดึงไปต่อกับ PIC_PATH ในฟังก์ชัน (ต้องใส่แค่ชื่อไฟล์) ---
 PIC_MAIN = "1.png"
 PIC_LOGIN = "2.png"
-PIC_REGISTER = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\3.png"
-PIC_TABLE_SELECT = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\7 Table.png"
-PIC_PROFILE_VIEW ="D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\5 profile.png"
-PIC_PROFILE_EDIT = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\6 edit profile.png"
 PIC_ABOUT = "about.png"
-PIC_FORGOT_PASSWORD = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\4.png"
-PIC_ADMIN_PANEL = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\admin.png"
-PIC_ADMIN_TABLE_VIEW = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\admin table.png"
-PIC_ADMIN_MANAGE_MENU = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\admin menu.png" 
-PIC_ADMIN_ADD_MENU = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\add menu 6.png" 
-PIC_ADMIN_EDIT_MENU = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\edit menu 7.png" 
-PIC_ADMIN_STATUS_VIEW = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\Stock.png"
-PIC_ADMIN_MANAGE_ORDER = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\edit table.png"
-PIC_ADMIN_ORDERS_VIEW = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\order.png" 
-global bg_image_admin_orders_view
-bg_image_admin_orders_view = None
-global bg_image_admin_manage_order
-bg_image_admin_manage_order = None
 PIC_MENU_PLACEHOLDER = "placeholder.png" 
-PIC_CUSTOMER_MENU = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\9 menu.png"
-PIC_CART_PAGE = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\basket.png"
-PIC_CHECKOUT_PAGE ="D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\payment summary.png" 
+
+# --- กลุ่มที่ 2: ตัวแปรที่ต้องใช้ Path เต็ม (เราจะใช้ตัวแปร PIC_PATH มาเชื่อมให้เลย) ---
+PIC_CHECKOUT_PAGE      = PIC_PATH + "payment summary.png" 
+PIC_PAYMENT_PAGE       = PIC_PATH + "pay.png"
+PIC_ADMIN_SALES        = PIC_PATH + "Sales.png"
+PIC_REGISTER           = PIC_PATH + "3.png"
+PIC_TABLE_SELECT       = PIC_PATH + "7 Table.png"
+PIC_PROFILE_VIEW       = PIC_PATH + "5 profile.png"
+PIC_PROFILE_EDIT       = PIC_PATH + "6 edit profile.png"
+PIC_FORGOT_PASSWORD    = PIC_PATH + "4.png"
+PIC_ADMIN_PANEL        = PIC_PATH + "admin.png"
+PIC_ADMIN_TABLE_VIEW   = PIC_PATH + "admin table.png"
+PIC_ADMIN_MANAGE_MENU  = PIC_PATH + "admin menu.png" 
+PIC_ADMIN_ADD_MENU     = PIC_PATH + "add menu 6.png" 
+PIC_ADMIN_EDIT_MENU    = PIC_PATH + "edit menu 7.png" 
+PIC_ADMIN_STATUS_VIEW  = PIC_PATH + "Stock.png"
+PIC_ADMIN_MANAGE_ORDER = PIC_PATH + "edit table.png"
+PIC_ADMIN_ORDERS_VIEW  = PIC_PATH + "order.png" 
+PIC_CUSTOMER_MENU      = PIC_PATH + "9 menu.png"
+PIC_CART_PAGE          = PIC_PATH + "basket.png"
+PIC_PAYMENT_PAGE = "D:\\Project Nudee\\picnudee\\pay.png"
+PIC_ADMIN_SALES = "D:\\Project Nudee\\picnudee\\Sales.png"
 
 ADMIN_USERNAME = "admineiei"
 ADMIN_PASSWORD = "12345678"
@@ -700,9 +698,9 @@ import os
 import webbrowser
 from datetime import datetime
 
-LOGO_PATH = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\logo.png" 
-FONT_TH_PATH = "D:\\Windows\\Fonts\\Tahoma.ttf"  
-FONT_NAME = "Tahoma" 
+LOGO_PATH = "D:\\Project Nudee\\picnudee\\logo.png" 
+FONT_TH_PATH = "C:\\Windows\\Fonts\\Tahoma.ttf"  # ปกติฟอนต์ Windows จะอยู่ที่ Drive C:
+FONT_NAME = "Tahoma"
 
 def generate_receipt_pdf(order_data, order_details_list, total_before_vat, vat_amount, grand_total):
     """
@@ -2364,9 +2362,9 @@ def register_page(prev_window=None):
 # 5. PDF GENERATION (หน้าใบเสร็จ)
 # ==============================================================================
 
-FONT_TH_PATH = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\THSarabunNew.ttf" 
+FONT_TH_PATH = "D:\\Project Nudee\\picnudee\\THSarabunNew.ttf" 
 FONT_NAME = "THSarabunNew" 
-LOGO_PATH = "D:\\ส้มตำฟรุ้งฟริ้ง\\picnudee\\logo.png" 
+LOGO_PATH = "D:\\Project Nudee\\picnudee\\logo.png" 
 
 def _draw_receipt_table_header(pdf, width, height, FONT_NAME):
     """(Helper) วาดหัวตารางสำหรับหน้าใหม่"""
